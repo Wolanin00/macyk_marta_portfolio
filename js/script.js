@@ -222,4 +222,17 @@
 		initIsotope();
 	});
 
+  $('a[data-target]').on('click', function(e) {
+    e.preventDefault();
+
+    // Trigger click on the menu button
+    $('.menu-btn').click();
+
+    // Scroll to the #testimonial section
+    var targetSection = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(targetSection).offset().top
+    }, 400); // You can adjust the animation duration if needed
+  });
+
 })(jQuery);
