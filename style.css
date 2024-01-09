@@ -1368,6 +1368,29 @@ This is main CSS file that contains custom style rules used in this template
   z-index: 10;
 }
 
+@media only screen and (max-width: 580px) {
+  .main-logo {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-color);
+    padding: 40px;
+    margin-right: 60px;
+    transition: 0.5s all ease-out;
+    width: 150px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .main-logo a {
+    font-family: "playfair display", Georgia, serif;
+    font-size: 2em;
+    color: #fff;
+    margin: 0 auto;
+    transition: 0.5s all ease-out;
+  }
+}
+
 /* Header Menu
 --------------------------------------------------------------*/
 header .main-logo {
@@ -2106,7 +2129,7 @@ body.nav-active .nav__block .nav__block-item {
 @media only screen and (max-width: 580px) {
   .main-slider .banner-content {
     margin-top: 180px;
-    width: 90%;
+    width: 100%;
   }
 
   .main-slider .slider-item {
